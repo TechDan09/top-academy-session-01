@@ -12,12 +12,15 @@
     <header class="header">
       <nav class="menu">
         <ul>
+          <div class="mobile_menu">
+            <img src="/images/icon-hamburger.svg" alt="hamburger mobile menu" />
+          </div>
           <li class="logo">
             <a href="#">
               <img src="/images/logo.svg" alt="logo" />
             </a>
           </li>
-          <div class="nav_links">
+          <div class="nav_links open">
             <li>
               <a href="#">Collections</a>
             </li>
@@ -96,9 +99,13 @@
           <p class="regular_price">$250</p>
           <div class="add_to_cart">
             <div class="cart_counter">
-              <div class="cart_counter_btn" id="minus_btn">-</div>
+              <div class="cart_counter_btn" id="minus_btn">
+                <img src="/images/icon-minus.svg" alt="minus icon" />
+              </div>
               <div class="cart_counter_input" id="cart_input">0</div>
-              <div class="cart_counter_btn" id="plus_btn">+</div>
+              <div class="cart_counter_btn" id="plus_btn">
+                <img src="/images/icon-plus.svg" alt="plus icon" />
+              </div>
             </div>
             <button class="add_to_cart_btn">
               <img src="/images/icon-cart.svg" alt="cart" /> Add To Cart
