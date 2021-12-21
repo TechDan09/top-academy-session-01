@@ -1,3 +1,4 @@
+// UI ELEMENTS
 const menuBtn = document.querySelector('.mobile_menu');
 const nav = document.querySelector('.nav_links');
 const navLinks = nav.childNodes;
@@ -6,6 +7,8 @@ const plusBtn = document.getElementById('plus_btn');
 const cartInput = document.getElementById('cart_input');
 const addToCartBtn = document.querySelector('.add_to_cart_btn');
 const productPrice = 125;
+const productImages = document.querySelector('.image_thumbnails').childNodes;
+const mainImage = document.getElementById('main_image');
 
 let totalQuantity = Number(cartInput.textContent);
 let totalPrice = totalQuantity * 125;
@@ -40,4 +43,15 @@ plusBtn.addEventListener('click', () => {
 
 addToCartBtn.addEventListener('click', () => {
   console.log(`Quantity in cart: ${totalQuantity} | Total Price: ${totalPrice}`);
+});
+
+console.log(mainImage);
+
+productImages.forEach((image) => {
+  image.addEventListener('click', () => {
+    //removing the "-thumbnail" from the image src name in
+    //order to access high resolution version of image
+    let imageSrc = image.src.replace('-thumbnail', '');
+    mainImage.src = imageSrc;
+  });
 });
